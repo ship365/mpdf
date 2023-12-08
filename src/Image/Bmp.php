@@ -77,7 +77,7 @@ class Bmp
 			case 1:
 			case 4:
 			case 8:
-				$w = floor($width / (8 / $biBitCount)) + ($width % (8 / $biBitCount) ? 1 : 0);
+				$w = (int)(floor($width / (8 / $biBitCount)) + ($width % (8 / $biBitCount) ? 1 : 0));
 				$w_row = $w + $padCnt;
 				if ($flip) {
 					for ($y = 0; $y < $height; $y++) {
